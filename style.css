@@ -173,18 +173,19 @@ nav ul li a:hover::after{
 .tab_contents.active_tab{
     display: block;
 }
+
+#Myprojects{
+    padding: 50px 0;
+}
 .subtitle-2{
     font-size: 60px;
     font-weight: 600;
     color: #ffffff;
-    margin-left: 43%;
-}
-#Myprojects{
-    padding: 50px 0;
+    margin-left: 41%;
 }
 .work_list{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    justify-content: space-evenly; 
     margin-left: 50px;
 }
 .work{
@@ -196,11 +197,10 @@ nav ul li a:hover::after{
 }
 .work img{
     margin-top: 12%;
-    margin-left: 30px;
-    width: 75%;
+    width: 85%;
     align-items: center;
     border-radius: 20px;
-    border-color: #C9FBFF;
-    border-width: 5px;
-    border-style:groove;
+    border-color: #5a5d5e;
+    border-width: 2px;
+    border-style:solid;
 }
