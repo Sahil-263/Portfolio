@@ -206,7 +206,7 @@ nav ul li a:hover::after{
 
 .card:hover {
   transform: scale(1.05);
-  border: #61bdec 3px solid;
+  border: #0582ca 3px solid;
 }
 
 .card-image {
@@ -233,7 +233,6 @@ nav ul li a:hover::after{
   background-size: cover;
   background-position-y: 40%;
   filter: blur(0);
-  filter: grayscale(50%);
   transition: filter 0.3s ease-in-out; 
 }
 
