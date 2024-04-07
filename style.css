@@ -216,7 +216,6 @@ nav ul li a:hover::after{
   filter: blur(0);
   transition: filter 0.3s ease-in-out;
 }
-
 .card-image2{
   width: 100%;
   height: 100%;
@@ -226,8 +225,18 @@ nav ul li a:hover::after{
   filter: blur(0);
   transition: filter 0.3s ease-in-out;    
 }
+.card-image3{
+  width: 100%;
+  height: 100%;
+  background-image: url('images/anime.png'); /* Your image URL here */
+  background-size: cover;
+  background-position-y: 40%;
+  filter: blur(0);
+  filter: grayscale(50%);
+  transition: filter 0.3s ease-in-out; 
+}
 
-.card:hover .card-image .card-image2{
+.card:hover .card-image, .card:hover .card-image2, .card:hover .card-image3{
   filter: blur(5px);
 }
 
