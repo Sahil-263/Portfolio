@@ -217,7 +217,17 @@ nav ul li a:hover::after{
   transition: filter 0.3s ease-in-out;
 }
 
-.card:hover .card-image {
+.card-image2{
+  width: 100%;
+  height: 100%;
+  background-image: url('images/color_pallette.jpeg'); /* Your image URL here */
+  background-size: cover;
+  background-position-y: 40%;
+  filter: blur(0);
+  transition: filter 0.3s ease-in-out;    
+}
+
+.card:hover .card-image .card-image2{
   filter: blur(5px);
 }
 
