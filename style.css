@@ -264,3 +264,9 @@ nav ul li a:hover::after{
 .card-content p {
   margin: 10px 0 0;
 }
+.cinfo{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    background-color: #000000;
+}
