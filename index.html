@@ -53,7 +53,9 @@
           </p>
           <br />
           <button>
-            <a href="#Contact-info" class="btn2"><span class="spn2">CONTACT ME</span></a>
+            <a href="#Contact-info" class="btn2"
+              ><span class="spn2">CONTACT ME</span></a
+            >
           </button>
           <p></p>
           <br />
@@ -166,7 +168,10 @@
           <div class="contact-left">
             <h1>Contact Me</h1>
             <p>
-              <i class="bi bi-envelope-at-fill"></i>sahilarora2063@gmail.com
+              <a href="mailto:sahilarora2063@gmail.com"
+                ><i class="bi bi-envelope-at-fill"></i
+                >sahilarora2063@gmail.com</a
+              >
             </p>
             <p><i class="bi bi-telephone-fill"></i>8851949628</p>
             <div class="social-icons">
@@ -189,17 +194,30 @@
             </div>
           </div>
           <div class="contact-right">
-            <form class="app-form">
+            <form class="app-form" name="app-form">
               <div class="app-form-group">
-                <input type="text" class="app-form-control" placeholder="NAME" required />
-              </div>
-              <div class="app-form-group">
-                <input type="email" class="app-form-control" placeholder="EMAIL" required />
+                <input
+                  type="text"
+                  class="app-form-control"
+                  name="name"
+                  placeholder="NAME"
+                  required
+                />
               </div>
               <div class="app-form-group">
                 <input
-                type="number"
+                  type="email"
                   class="app-form-control"
+                  name="email"
+                  placeholder="EMAIL"
+                  required
+                />
+              </div>
+              <div class="app-form-group">
+                <input
+                  type="number"
+                  class="app-form-control"
+                  name="contact"
                   placeholder="CONTACT NO"
                   required
                 />
@@ -208,12 +226,17 @@
                 <input
                   type="text"
                   class="app-form-control"
+                  name="message"
                   placeholder="MESSAGE"
                   required
                 />
               </div>
               <div class="form-buttons">
-                <button class="form-submit" type="submit">SEND</button>
+                <button class="submitbtn" onclick="resetForm()">
+                  <span class="txt">SUBMIT</span>
+                  <span class="txt2">sent!</span>
+                  </span>
+                </button>
               </div>
             </form>
           </div>
@@ -246,6 +269,22 @@
         event.currentTarget.classList.add("active_link");
         document.getElementById(tabname).classList.add("active_tab");
       }
+    </script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbxBg6bRWYdrW-rMvDKOQL_bEUHo6Wj8zTgf-ZoZCdvoe5qsizjNpM3SjBH8OBPltzo/exec";
+      const form = document.forms["app-form"];
+      const submitBtn = document.querySelector(".submitbtn");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {setTimeout(() => 3000)
+          form.reset()})
+          .catch((error) => console.error("Error!", error.message));
+      });
+
     </script>
   </body>
 </html>
